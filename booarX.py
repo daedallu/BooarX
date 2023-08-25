@@ -135,7 +135,7 @@ upperRep()
 charspec()
 rmClone()
 sorT()
-ranGo= len(mainlist)*5
+ranGo= len(mainlist)**2
 #msg=f'{ranGo} was generated based on provided data.'
 #print(msg)
 f=open(f"{name}.txt", "a")
