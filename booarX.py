@@ -4,9 +4,16 @@ import collect_items as c_i #une module pour collecter les donnees
 import specnum as sn #un module pour modifier les donnees
 import logo_ascii as logo
 import pseudo_secrets as pseudo
+from magic_spell import cut_edges, to_string
+from random import randint
+from ranstr_gen import *
+from factorialize import fac
+
 #listes vides
 list_edit=[]
 list_main=[]
+#list_=[]
+list_final=[]
 #charge le buffer pour la présentation du logo en ascii
 logo.presentation("BooarX.txt")
 #procedure de insertion des donnees
@@ -105,9 +112,26 @@ if mode_num=='y':
 Une fonction pour passer les elements de la liste interne du module vers la liste vide du code
 (dans ce cas, 'list_main')
 """
-list_main = sn.transfer_list(list_main)
+list_ = sn.transfer_list(list_main)
 
-print(list_main)
+
+depuration=cut_edges(list_)
+
+length=len(depuration)
+print(length)
+
+index=fac(length)
+print(fac)
+
+for i in range(index):	
+	for psswd in range(1,5):
+		stringo=''.join(pseudo.choice(depuration))
+		list_final.append(stringo)
+        
+    
+
+        	
+print(list_final)
 
 
 
